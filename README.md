@@ -1,9 +1,10 @@
+
 # DFIR-Horcrux-Investigation
 Digital forensics walkthrough of a Windows AD1 evidence image — registry analysis, browser forensics, and email investigation using EZTools, FTK Imager, and DB Browser for SQLite.
 
 
 
-# 🔍 DFIR Walkthrough: Horcrux.ad1 Forensic Image Analysis
+#  DFIR Walkthrough: Horcrux.ad1 Forensic Image Analysis
 
 > **Difficulty:** Beginner–Intermediate  
 > **Tools:** FTK Imager, Registry Explorer, DB Browser for SQLite, Kernel OST Viewer  
@@ -12,7 +13,7 @@ Digital forensics walkthrough of a Windows AD1 evidence image — registry analy
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [What is an AD1 Image?](#what-is-an-ad1-image)
 2. [Image Integrity Verification](#image-integrity-verification)
@@ -82,7 +83,7 @@ The Windows Registry is a goldmine for forensic investigators. Three hives were 
 
 ---
 
-### 🔑 SAM Hive — User Accounts
+###  SAM Hive — User Accounts
 
 **Path:** `SAM\Domains\Account\Users`
 
@@ -126,7 +127,7 @@ Navigate to `Users > 000003E9` (Karen's User ID 1001 in hex = 0x3E9):
 
 ---
 
-### 🔑 SYSTEM Hive — Machine Configuration
+###  SYSTEM Hive — Machine Configuration
 
 **Why SYSTEM?** The SYSTEM hive stores hardware configuration, services, and machine-level settings. It's the authoritative source for hostname and timezone — both machine-wide settings that don't belong to any individual user.
 
@@ -150,7 +151,7 @@ Navigate to `Users > 000003E9` (Karen's User ID 1001 in hex = 0x3E9):
 
 ---
 
-### 🔑 SOFTWARE Hive — OS Build Number
+###  SOFTWARE Hive — OS Build Number
 
 **Path:** `Microsoft\Windows NT\CurrentVersion`
 
@@ -350,5 +351,4 @@ VGhlQ2FyZENyaWVzTm9Nb3Jl  →  TheCaryCriesNoMore
 *Written for educational purposes as part of a DFIR course assignment.*  
 *All tools used are industry-standard and freely or freely available for download.*
 
-> **Note for GitHub:** Place all screenshot PNG files in a `screenshots/` subfolder alongside this README for images to render correctly.
 
